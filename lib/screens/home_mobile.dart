@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeMobile extends StatefulWidget {
+  const HomeMobile({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeMobile> createState() => _HomeMobileState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeMobileState extends State<HomeMobile> {
   final _usernameController = TextEditingController();
   String resultMessage = '';
 
@@ -24,9 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   IconButton(
+                      hoverColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      enableFeedback: false,
                       onPressed: () {},
                       icon: SvgPicture.asset(
-                          'assets/images/moon-light.svg')), // add dark mode functionality later
+                        'assets/images/moon-light.svg',
+                      )), // add dark mode functionality later
                 ],
               ),
             ),
