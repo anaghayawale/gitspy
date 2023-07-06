@@ -63,10 +63,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - assets/images/add.svg
-  #   - assets/images/comment.svg
-  #   - assets/images/delete.svg
+  assets:
+    - assets/images/add.svg
+    - assets/images/moon-dark.svg
+    - assets/images/moon-light.svg
+    - assets/images/crescent-moon.png
+    - assets/images/crescent-moon-light.png
   #   - assets/images/fork.svg
   #   - assets/images/star.svg
 
