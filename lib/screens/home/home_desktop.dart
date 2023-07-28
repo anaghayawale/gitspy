@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gitspy/constants.dart'; // Import the constants.dart file
+import 'package:gitspy/constants.dart';
+import 'package:gitspy/widgets/social_icon.dart';
 
 class HomeDesktop extends StatefulWidget {
-  const HomeDesktop({Key? key}) : super(key: key); // Fix the super() call with the correct syntax
+  const HomeDesktop({Key? key})
+      : super(key: key); // Fix the super() call with the correct syntax
 
   @override
   State<HomeDesktop> createState() => _HomeDesktopState();
@@ -20,11 +22,12 @@ class _HomeDesktopState extends State<HomeDesktop> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(kDefaultPadding), // Use the constant from constants.dart
+              padding: const EdgeInsets.all(
+                  kDefaultPadding), // Use the constant from constants.dart
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  IconButton( 
+                  IconButton(
                     hoverColor: Colors.transparent,
                     focusColor: Colors.transparent,
                     splashColor: Colors.transparent,
@@ -38,7 +41,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
               ),
             ),
-            Expanded( // Add the Expanded widget here
+            Expanded(
+              // Add the Expanded widget here
               child: Center(
                 child: Container(
                   //color: Colors.yellow,
@@ -97,7 +101,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     setState(() {
                                       final username = _usernameController.text;
                                       if (username.isEmpty) {
-                                        resultMessage = 'Please enter a username';
+                                        resultMessage =
+                                            'Please enter a username';
                                       } else {
                                         resultMessage = 'Result: $username';
                                       }
@@ -137,37 +142,23 @@ class _HomeDesktopState extends State<HomeDesktop> {
             Container(
               //color: Colors.lightGreen,
               padding: const EdgeInsets.all(10),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     'Spying? call it social research.',
                     style: TextStyle(
                       fontSize: 13,
-                      color: Color.fromARGB(255, 105, 104, 104),
+                      color: Color.fromARGB(255, 49, 49, 49),
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
+                      SocialMediaIcon(imageUrl: 'images/github.svg', linkUrl: 'https://github.com/anaghayawale'),
+                      SocialMediaIcon(imageUrl: 'images/instagram.svg', linkUrl: 'https://www.instagram.com/herecomesanagha/'),
+                      SocialMediaIcon(imageUrl: 'images/linkedin-in.svg', linkUrl: 'https://www.linkedin.com/in/anagha-yawale/'),
+                      
                     ],
                   )
                 ],

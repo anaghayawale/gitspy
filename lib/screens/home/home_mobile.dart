@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gitspy/screens/result_screen.dart';
-import 'package:gitspy/constants.dart'; // Import the constants.dart file
+import 'package:gitspy/constants.dart'; 
+import 'package:gitspy/widgets/social_icon.dart';
 
 class HomeMobile extends StatefulWidget {
   const HomeMobile({Key? key})
@@ -130,34 +131,19 @@ class _HomeMobileState extends State<HomeMobile> {
             Container(
               //color: Colors.lightGreen,
               padding: const EdgeInsets.all(5),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Spying? call it social reseach.',
+                  Text('Spying? call it social reseach.',
                       style: TextStyle(
                           fontSize: 13,
                           color: Color.fromARGB(255, 105, 104, 104))),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          //link to facebook
-                        },
-                        icon: const Icon(Icons.facebook_outlined),
-                      ),
+                      SocialMediaIcon(imageUrl: 'images/github.svg', linkUrl: 'https://github.com/anaghayawale'),
+                      SocialMediaIcon(imageUrl: 'images/instagram.svg', linkUrl: 'https://www.instagram.com/herecomesanagha/'),
+                      SocialMediaIcon(imageUrl: 'images/linkedin-in.svg', linkUrl: 'https://www.linkedin.com/in/anagha-yawale/'),
                     ],
                   )
                 ],
