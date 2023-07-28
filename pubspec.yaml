@@ -70,6 +70,9 @@ flutter:
     - assets/images/moon-light.svg
     - assets/images/crescent-moon.png
     - assets/images/crescent-moon-light.png
+    - assets/images/insta.png
+    - assets/images/git.png
+    - assets/images/linkedin.png
   #   - assets/images/fork.svg
   #   - assets/images/star.svg
 
