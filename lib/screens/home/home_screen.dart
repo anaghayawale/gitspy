@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gitspy/screens/home_desktop.dart';
-import 'package:gitspy/screens/home_mobile.dart';
+import 'package:gitspy/screens/home/home_desktop.dart';
+import 'package:gitspy/screens/home/home_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeScreen extends StatelessWidget {

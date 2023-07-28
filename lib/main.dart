@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gitspy/screens/home_screen.dart';
+import 'package:gitspy/screens/home/home_screen.dart';
 
 
 void main() {

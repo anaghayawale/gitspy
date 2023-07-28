@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gitspy/screens/result_screen.dart';
+import 'package:gitspy/constants.dart'; // Import the constants.dart file
 
 class HomeMobile extends StatefulWidget {
-  const HomeMobile({super.key});
+  const HomeMobile({Key? key})
+      : super(key: key); // Fix the super() call with the correct syntax
 
   @override
   State<HomeMobile> createState() => _HomeMobileState();
@@ -19,24 +22,27 @@ class _HomeMobileState extends State<HomeMobile> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(
+                  kDefaultPadding), // Use the constant from constants.dart
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   IconButton(
-                      hoverColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      enableFeedback: false,
-                      onPressed: () {},
-                      icon: SvgPicture.asset(
-                        'assets/images/moon-light.svg',
-                      )), // add dark mode functionality later
+                    hoverColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    enableFeedback: false,
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      'assets/images/moon-light.svg',
+                    ),
+                  ),
                 ],
               ),
             ),
             Expanded(
+              // Add the Expanded widget here
               child: Center(
                 child: Container(
                   //color: Colors.yellow,
@@ -70,7 +76,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               decoration: const InputDecoration(
                                 hintText: 'Enter GitHub username',
                                 focusedBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.purple),
+                                  borderSide: BorderSide(color: kPrimaryColor),
                                 ),
                               ),
                             ),
@@ -84,14 +90,20 @@ class _HomeMobileState extends State<HomeMobile> {
                                   if (username.isEmpty) {
                                     resultMessage = 'Please enter a username';
                                   } else {
-                                    resultMessage = 'Result: $username';
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ResultScreen(username: username),
+                                      ),
+                                    );
                                   }
                                 });
                               },
                               style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40)),
-                                backgroundColor: Colors.purple,
+                                backgroundColor: kPrimaryColor,
                                 minimumSize: const Size(120, 40),
                               ),
                               child: const Text(
@@ -105,7 +117,7 @@ class _HomeMobileState extends State<HomeMobile> {
                             Text(
                               resultMessage,
                               style: const TextStyle(
-                                  fontSize: 18, color: Colors.red),
+                                  fontSize: 18, color: kErrorColor),
                             ),
                           ],
                         ),
