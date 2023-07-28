@@ -40,6 +40,7 @@ dependencies:
   http: ^1.1.0
   url_launcher: ^6.1.11
   responsive_builder: ^0.7.0
+  font_awesome_flutter: ^10.5.0
 
 dev_dependencies:
   flutter_test:
@@ -70,9 +71,10 @@ flutter:
     - assets/images/moon-light.svg
     - assets/images/crescent-moon.png
     - assets/images/crescent-moon-light.png
-    - assets/images/insta.png
-    - assets/images/git.png
-    - assets/images/linkedin.png
+    - assets/images/instagram.svg
+    - assets/images/linkedin-in.svg
+    - assets/images/github.svg
+
   #   - assets/images/fork.svg
   #   - assets/images/star.svg
 
